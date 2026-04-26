@@ -180,10 +180,6 @@
 </div>
 </div>
 </div>
-<!-- Action Button -->
-<div class="p-4 bg-white border-t border-outline-variant">
-    <button id="classify-btn" class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl shadow-md active:scale-95 transition-all">Capture & Classify</button>
-</div>
 </div>
 </section>
 <!-- Section 2: Results Panel -->
@@ -492,40 +488,24 @@
                 }
                 document.getElementById('upload-btn').classList.add('bg-white', 'text-primary');
                 document.getElementById('webcam-btn').classList.remove('bg-white', 'text-primary');
+
+                // Auto-classify uploaded photo after a short delay to ensure image is loaded
+                setTimeout(async () => {
+                    if (model) {
+                        const prediction = await model.predict(previewImg);
+                        let best = { probability: 0 };
+                        prediction.forEach(p => {
+                            if (p.probability > best.probability) best = p;
+                        });
+                        updateUI(best);
+                    }
+                }, 100);
             };
             reader.readAsDataURL(file);
         }
     });
 
-    document.getElementById('classify-btn').addEventListener('click', async () => {
-        if (!model) return alert("Model is still loading...");
-        
-        scanningIndicator.classList.remove('hidden');
-        
-        let prediction;
-        // Check if webcam is active by looking for the canvas
-        const container = document.getElementById('webcam-container');
-        const webcamActive = container.querySelector('canvas') !== null;
 
-        if (webcamActive && webcam) {
-            prediction = await model.predict(webcam.canvas);
-        } else {
-            prediction = await model.predict(previewImg);
-        }
-
-        // Find the best prediction
-        let best = { probability: 0 };
-        prediction.forEach(p => {
-            if (p.probability > best.probability) best = p;
-        });
-
-        // Update UI
-        updateUI(best);
-        
-        setTimeout(() => {
-            scanningIndicator.classList.add('hidden');
-        }, 1500);
-    });
 
     function updateUI(prediction) {
         const rawLabel = prediction.className;
