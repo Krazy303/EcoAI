@@ -163,6 +163,9 @@
 </div>
 <!-- Input Display Area -->
 <div id="webcam-container" class="relative flex-grow aspect-video lg:aspect-square overflow-hidden group bg-black">
+<button id="switch-camera-btn" class="hidden absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg active:scale-90">
+    <span class="material-symbols-outlined">flip_camera_ios</span>
+</button>
 <img id="preview-img" alt="Camera Feed Preview" class="w-full h-full object-cover" data-alt="Close-up of various plastic containers and glass bottles placed on a clean neutral surface for waste classification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmdpG_2o4fQ8TZ-6KmQ-2ei3Bhl58Bchpi6qwMhYhvaKLyCEjwz2MGQIAMUyxfWEvmg4Sgk9AXVtP_z0jr6M_nlKR-c4_yOJS1Yb_nHlf_PLM0i7P277QqU5AdJrsAhfWnrdgfy__Q3dVH9jgfM3RyGkmMx_G7auQ9KdN8B2cYEapbNXm13EH-iUV40ZcDzJXyGcNq3qnSk2rA58c1yPNwxKgsOy6D6-L_kBFugKrz9aBc_kYDPcSlxfqCWyM3rcni8HIdpflIBenw"/>
 <video id="webcam-video" class="hidden w-full h-full object-cover" autoplay playsinline muted></video>
 <!-- AI Overlay UI -->
@@ -297,6 +300,8 @@
         }
     };
 
+    let currentFacingMode = "user";
+
     async function init() {
         try {
             const modelURL = URL + "model.json";
@@ -326,12 +331,13 @@
             throw new Error("Webcam requires a secure context (HTTPS).");
         }
         
-        // Create webcam with minimal constraints for maximum compatibility
-        webcam = new tmImage.Webcam(400, 400, true); 
+        // Use currentFacingMode. Rear camera (environment) should NOT be flipped.
+        const flip = currentFacingMode === "user";
+        webcam = new tmImage.Webcam(400, 400, flip); 
         
         try {
-            // Try default setup first
-            await webcam.setup(); 
+            // Try setup with facingMode
+            await webcam.setup({ facingMode: currentFacingMode }); 
             await webcam.play();
         } catch (err) {
             console.warn("Standard webcam setup failed, trying fallback...", err);
@@ -357,6 +363,9 @@
         webcam.canvas.className = "w-full h-full object-cover";
         container.appendChild(webcam.canvas);
         
+        // Show switch camera button
+        document.getElementById('switch-camera-btn').classList.remove('hidden');
+        
         window.requestAnimationFrame(loop);
     }
 
@@ -366,6 +375,14 @@
             window.requestAnimationFrame(loop);
         }
     }
+
+    document.getElementById('switch-camera-btn').addEventListener('click', async () => {
+        currentFacingMode = currentFacingMode === "user" ? "environment" : "user";
+        if (webcam) {
+            webcam.stop();
+        }
+        await setupWebcam();
+    });
 
     document.getElementById('webcam-btn').addEventListener('click', async () => {
         const btn = document.getElementById('webcam-btn');
@@ -458,17 +475,20 @@
         // Robust mapping and cleaning
         let displayLabel = "Unknown";
         let metaKey = "NonRecycleable";
+        
+        // Remove dots and normalize for comparison
+        const normalized = rawLabel.toLowerCase().replace(/\./g, "");
 
-        if (rawLabel.toLowerCase().includes("nonrecycle") || rawLabel.toLowerCase().includes("non-recycle")) {
+        if (normalized.includes("nonrecycle") || normalized.includes("non-recycle")) {
             displayLabel = "Non-Recyclable";
             metaKey = "NonRecycleable";
-        } else if (rawLabel.toLowerCase().includes("recycle")) {
+        } else if (normalized.includes("recycle")) {
             displayLabel = "Recyclable";
             metaKey = "Recycleable";
-        } else if (rawLabel.toLowerCase().includes("organic")) {
+        } else if (normalized.includes("organic")) {
             displayLabel = "Organic";
             metaKey = "Organic";
-        } else if (rawLabel.toLowerCase().includes("hazard")) {
+        } else if (normalized.includes("hazard")) {
             displayLabel = "Hazardous";
             metaKey = "Hazard";
         }
