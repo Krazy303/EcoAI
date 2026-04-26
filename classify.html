@@ -191,7 +191,10 @@
 <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm border border-outline-variant flex flex-col items-center text-center">
 <span class="text-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-space-sm">Classification Result</span>
 <div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-space-lg shadow-inner bg-white"><img alt="EcoAI" class="w-16 h-16 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/></div>
-<h2 id="result-label" class="font-h2 text-h2 text-primary mb-2">Awaiting Input</h2>
+<h2 id="result-label" class="font-h2 text-h2 text-primary mb-2 flex items-center justify-center gap-2">
+    Awaiting Input
+    <span id="live-badge" class="hidden flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
+</h2>
 <div class="flex items-center gap-2 mb-space-lg w-full px-4">
 <div class="flex-grow bg-surface-container h-3 rounded-full overflow-hidden">
 <div id="confidence-bar" class="bg-primary-container h-full w-[0%] transition-all duration-500"></div>
@@ -302,6 +305,10 @@
 
     let currentFacingMode = "user";
 
+    const liveBadge = document.getElementById('live-badge');
+    let isLiveMode = false;
+    let predictionInterval;
+
     async function init() {
         try {
             const modelURL = URL + "model.json";
@@ -363,10 +370,13 @@
         webcam.canvas.className = "w-full h-full object-cover";
         container.appendChild(webcam.canvas);
         
-        // Show switch camera button
+        // Show switch camera button and live badge
         document.getElementById('switch-camera-btn').classList.remove('hidden');
+        liveBadge.classList.remove('hidden');
+        isLiveMode = true;
         
         window.requestAnimationFrame(loop);
+        startLivePrediction();
     }
 
     async function loop() {
@@ -374,6 +384,20 @@
             webcam.update();
             window.requestAnimationFrame(loop);
         }
+    }
+
+    function startLivePrediction() {
+        if (predictionInterval) clearInterval(predictionInterval);
+        predictionInterval = setInterval(async () => {
+            if (isLiveMode && model && webcam && webcam.canvas) {
+                const prediction = await model.predict(webcam.canvas);
+                let best = { probability: 0 };
+                prediction.forEach(p => {
+                    if (p.probability > best.probability) best = p;
+                });
+                updateUI(best);
+            }
+        }, 300); // Predict every 300ms for performance
     }
 
     document.getElementById('switch-camera-btn').addEventListener('click', async () => {
@@ -422,6 +446,11 @@
                 previewImg.src = event.target.result;
                 previewImg.classList.remove('hidden');
                 
+                // Stop live mode
+                isLiveMode = false;
+                liveBadge.classList.add('hidden');
+                if (predictionInterval) clearInterval(predictionInterval);
+
                 // Remove webcam canvas if it exists
                 const container = document.getElementById('webcam-container');
                 const existingCanvas = container.querySelector('canvas');
