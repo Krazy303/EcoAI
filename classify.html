@@ -11,129 +11,129 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script>
- if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
- document.documentElement.classList.add('dark');
- } else {
- document.documentElement.classList.remove('dark');
- }
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
 </script>
 <script id="tailwind-config">
- tailwind.config = {
- darkMode: "class",
- theme: {
- extend: {
- "colors": {
- "primary-fixed-dim": "#4ae183",
- "surface-variant": "#e1e3e4",
- "tertiary-fixed-dim": "#e4beb2",
- "primary": "#006d37",
- "on-background": "#191c1d",
- "surface-bright": "#f8f9fa",
- "on-secondary-fixed-variant": "#004b73",
- "tertiary-container": "#cfab9f",
- "surface-container-high": "#e7e8e9",
- "on-primary-fixed-variant": "#005228",
- "tertiary": "#75584d",
- "on-tertiary-fixed-variant": "#5b4137",
- "outline": "#6c7b6d",
- "on-primary": "#ffffff",
- "surface-container": "#edeeef",
- "secondary": "#006397",
- "background": "#f8f9fa",
- "tertiary-fixed": "#ffdbce",
- "surface-container-highest": "#e1e3e4",
- "on-secondary-fixed": "#001d31",
- "inverse-surface": "#2e3132",
- "surface-container-low": "#f3f4f5",
- "on-secondary-container": "#00476e",
- "secondary-fixed-dim": "#92ccff",
- "primary-fixed": "#6bfe9c",
- "inverse-primary": "#4ae183",
- "error": "#ba1a1a",
- "on-tertiary-fixed": "#2b160f",
- "on-surface": "#191c1d",
- "on-error": "#ffffff",
- "outline-variant": "#bbcbbb",
- "on-error-container": "#93000a",
- "inverse-on-surface": "#f0f1f2",
- "on-surface-variant": "#3d4a3e",
- "on-tertiary-container": "#593f35",
- "error-container": "#ffdad6",
- "secondary-container": "#5cb8fd",
- "on-tertiary": "#ffffff",
- "surface-container-lowest": "#ffffff",
- "surface-tint": "#006d37",
- "surface-dim": "#d9dadb",
- "surface": "#f8f9fa",
- "secondary-fixed": "#cce5ff",
- "primary-container": "#2ecc71",
- "on-primary-container": "#005027",
- "on-primary-fixed": "#00210c",
- "on-secondary": "#ffffff"
- },
- "borderRadius": {
- "DEFAULT": "0.25rem",
- "lg": "0.5rem",
- "xl": "0.75rem",
- "full": "9999px"
- },
- "spacing": {
- "space-xs": "4px",
- "space-xl": "48px",
- "container-max": "1280px",
- "space-md": "16px",
- "space-lg": "24px",
- "margin": "32px",
- "gutter": "24px",
- "space-sm": "8px",
- "unit": "8px",
- "space-xxl": "80px"
- },
- "fontFamily": {
- "body-md": ["Inter"],
- "body-lg": ["Inter"],
- "h1": ["Inter"],
- "h2": ["Inter"],
- "label-sm": ["Inter"],
- "label-md": ["Inter"],
- "h3": ["Inter"]
- },
- "fontSize": {
- "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
- "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
- "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
- "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
- "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
- "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
- "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}]
- }
- },
- },
- }
- </script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#4ae183",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary-fixed-dim": "#e4beb2",
+                    "primary": "#006d37",
+                    "on-background": "#191c1d",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed-variant": "#004b73",
+                    "tertiary-container": "#cfab9f",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed-variant": "#005228",
+                    "tertiary": "#75584d",
+                    "on-tertiary-fixed-variant": "#5b4137",
+                    "outline": "#6c7b6d",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "secondary": "#006397",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed": "#ffdbce",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-fixed": "#001d31",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-container": "#00476e",
+                    "secondary-fixed-dim": "#92ccff",
+                    "primary-fixed": "#6bfe9c",
+                    "inverse-primary": "#4ae183",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#2b160f",
+                    "on-surface": "#191c1d",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#bbcbbb",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-surface-variant": "#3d4a3e",
+                    "on-tertiary-container": "#593f35",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#5cb8fd",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#006d37",
+                    "surface-dim": "#d9dadb",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed": "#cce5ff",
+                    "primary-container": "#2ecc71",
+                    "on-primary-container": "#005027",
+                    "on-primary-fixed": "#00210c",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "space-xs": "4px",
+                    "space-xl": "48px",
+                    "container-max": "1280px",
+                    "space-md": "16px",
+                    "space-lg": "24px",
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "space-sm": "8px",
+                    "unit": "8px",
+                    "space-xxl": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "h3": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
- .material-symbols-outlined {
- font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
- }
- .scanning-line {
- height: 2px;
- background: linear-gradient(90deg, transparent, #2ecc71, transparent);
- box-shadow: 0 0 15px #2ecc71;
- position: absolute;
- width: 100%;
- top: 0;
- animation: scan 3s linear infinite;
- }
- @keyframes scan {
- 0% { top: 0%; }
- 50% { top: 100%; }
- 100% { top: 0%; }
- }
- </style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanning-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #2ecc71, transparent);
+            box-shadow: 0 0 15px #2ecc71;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            50% { top: 100%; }
+            100% { top: 0%; }
+        }
+    </style>
 </head>
-<body class="dark:bg-zinc-950 bg-background text-on-background dark:text-zinc-100 font-body-md min-h-screen flex flex-col dark:text-zinc-100">
+<body class="bg-background dark:bg-zinc-950 text-on-background dark:text-zinc-100 font-body-md min-h-screen flex flex-col">
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 backdrop-blur-md shadow-sm">
+<header class="fixed top-0 w-full z-50 border-b border-slate-100 dark:border-zinc-800 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm">
 <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
 <div class="text-2xl font-black tracking-tight text-emerald-600"><div class="flex items-center gap-2"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/><span class="text-emerald-600">EcoAI</span></div></div>
 <div class="hidden md:flex items-center gap-space-lg">
@@ -143,48 +143,48 @@
 <a class="text-slate-600 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors font-label-md" href="about.html">About</a>
 </div>
 <div class="flex items-center space-x-4">
-<button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
- <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
- <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
+<button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+    <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
+    <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
 </button>
 <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg hover:bg-emerald-700 transition-all active:scale-95 duration-150 flex items-center gap-2">
 <span class="material-symbols-outlined">analytics</span>
- Classify Waste
- </button>
+                Classify Waste
+            </button>
 </div></nav>
 </header>
 <!-- Main Content Canvas -->
 <main class="flex-grow pt-24 pb-space-xxl px-margin max-w-7xl mx-auto w-full">
 <header class="mb-space-xl text-center">
-<h1 class="font-h1 text-h1 text-on-surface dark:text-zinc-100 mb-space-xs">Smart Classifier</h1>
-<p class="font-body-lg text-body-lg text-on-surface dark:text-zinc-100 max-w-2xl mx-auto">Identify waste items instantly using AI to ensure they reach the right disposal stream.</p>
+<h1 class="font-h1 text-h1 text-on-surface mb-space-xs">Smart Classifier</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Identify waste items instantly using AI to ensure they reach the right disposal stream.</p>
 </header>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <!-- Section 1: Input Area (Bento-style large card) -->
 <section class="lg:col-span-7 flex flex-col gap-space-lg">
-<div class="bg-surface-container dark:bg-zinc-800 rounded-xl shadow-sm border border-outline-variant overflow-hidden flex flex-col h-full">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden flex flex-col h-full">
 <!-- Toggle Controls -->
-<div class="flex p-space-sm bg-surface-container dark:bg-zinc-800 border-b border-outline-variant">
-<button id="webcam-btn" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white dark:bg-zinc-900 shadow-sm rounded-lg text-primary font-label-md">
+<div class="flex p-space-sm bg-surface-container-low border-b border-outline-variant">
+<button id="webcam-btn" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white shadow-sm rounded-lg text-primary font-label-md">
 <span class="material-symbols-outlined">videocam</span>
- Webcam
- </button>
-<button id="upload-btn" class="flex-1 flex items-center justify-center gap-2 py-3 text-on-surface dark:text-zinc-100 hover:bg-surface-container dark:bg-zinc-800 transition-colors rounded-lg font-label-md">
+                            Webcam
+                        </button>
+<button id="upload-btn" class="flex-1 flex items-center justify-center gap-2 py-3 text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg font-label-md">
 <span class="material-symbols-outlined">upload_file</span>
- Upload Photo
- </button>
+                            Upload Photo
+                        </button>
 <input type="file" id="file-input" class="hidden" accept="image/*">
 </div>
 <!-- Input Display Area -->
 <div id="webcam-container" class="relative flex-grow aspect-[3/4] lg:aspect-square overflow-hidden group bg-black">
-<button id="switch-camera-btn" class="hidden absolute top-4 right-4 z-20 bg-white dark:bg-zinc-900 backdrop-blur-md p-3 rounded-full text-white hover:bg-white dark:bg-zinc-900 transition-all border border-white/30 shadow-lg active:scale-90">
- <span class="material-symbols-outlined">flip_camera_ios</span>
+<button id="switch-camera-btn" class="hidden absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg active:scale-90">
+    <span class="material-symbols-outlined">flip_camera_ios</span>
 </button>
 <img id="preview-img" alt="Camera Feed Preview" class="w-full h-full object-cover" data-alt="Close-up of various plastic containers and glass bottles placed on a clean neutral surface for waste classification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmdpG_2o4fQ8TZ-6KmQ-2ei3Bhl58Bchpi6qwMhYhvaKLyCEjwz2MGQIAMUyxfWEvmg4Sgk9AXVtP_z0jr6M_nlKR-c4_yOJS1Yb_nHlf_PLM0i7P277QqU5AdJrsAhfWnrdgfy__Q3dVH9jgfM3RyGkmMx_G7auQ9KdN8B2cYEapbNXm13EH-iUV40ZcDzJXyGcNq3qnSk2rA58c1yPNwxKgsOy6D6-L_kBFugKrz9aBc_kYDPcSlxfqCWyM3rcni8HIdpflIBenw"/>
 <video id="webcam-video" class="hidden w-full h-full object-cover" autoplay playsinline muted></video>
 <!-- AI Overlay UI -->
 <div id="scanning-indicator" class="hidden absolute inset-0 pointer-events-none">
- <div class="scanning-line"></div>
+    <div class="scanning-line"></div>
 </div>
 <!-- Framing Corners -->
 <div id="framing-corners" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -198,21 +198,21 @@
 <!-- Section 2: Results Panel -->
 <section class="lg:col-span-5 flex flex-col gap-space-lg">
 <!-- Main Result Card -->
-<div class="bg-surface-container dark:bg-zinc-800 p-space-xl rounded-xl shadow-sm border border-outline-variant flex flex-col items-center text-center">
-<span class="text-sm font-label-sm text-on-surface dark:text-zinc-100 uppercase tracking-widest mb-space-sm">Classification Result</span>
-<div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-space-lg shadow-inner bg-white dark:bg-zinc-900 "><img alt="EcoAI" class="w-16 h-16 object-contain" src="logo.png"/></div>
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm border border-outline-variant flex flex-col items-center text-center">
+<span class="text-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-space-sm">Classification Result</span>
+<div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-space-lg shadow-inner bg-white"><img alt="EcoAI" class="w-16 h-16 object-contain" src="logo.png"/></div>
 <h2 id="result-label" class="font-h2 text-h2 text-primary mb-2 flex items-center justify-center gap-2">
- Awaiting Input
- <span id="live-badge" class="hidden flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
+    Awaiting Input
+    <span id="live-badge" class="hidden flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
 </h2>
 <div class="flex items-center gap-2 mb-space-lg w-full px-4">
-<div class="flex-grow bg-surface-container dark:bg-zinc-800 h-3 rounded-full overflow-hidden">
+<div class="flex-grow bg-surface-container h-3 rounded-full overflow-hidden">
 <div id="confidence-bar" class="bg-primary-container h-full w-[0%] transition-all duration-500"></div>
 </div>
 <span id="confidence-text" class="font-label-md text-on-primary-fixed-variant whitespace-nowrap">0% Confidence</span>
 </div>
 <div class="w-full mb-space-xl">
-<div class="p-space-md bg-surface-container dark:bg-zinc-800 rounded-lg border border-outline-variant/30 flex justify-between items-center">
+<div class="p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
 <span class="text-xs font-label-sm">BIN COLOR</span>
 <span id="bin-text" class="font-bold text-secondary">Waiting for scan...</span>
 </div>
@@ -220,7 +220,7 @@
 </div>
 <!-- Eco Tip Box -->
 <div class="bg-secondary-fixed text-on-secondary-fixed-variant p-space-lg rounded-xl flex gap-space-md border border-secondary-container">
-<div class="bg-white dark:bg-zinc-900 p-2 rounded-lg h-fit">
+<div class="bg-white/40 p-2 rounded-lg h-fit">
 <span class="material-symbols-outlined">lightbulb</span>
 </div>
 <div>
@@ -229,25 +229,25 @@
 </div>
 </div>
 <!-- Secondary Info / Actions -->
-<div class="bg-surface-container dark:bg-zinc-800 p-space-lg rounded-xl border border-outline-variant">
-<h4 class="font-label-md text-on-surface dark:text-zinc-100 mb-space-md">Nearby Disposal Points</h4>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant">
+<h4 class="font-label-md text-on-surface-variant mb-space-md">Nearby Disposal Points</h4>
 <div class="space-y-space-sm">
-<div class="flex items-center justify-between p-space-sm hover:bg-surface-container dark:bg-zinc-800 rounded-lg transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-space-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer group">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-secondary">location_on</span>
 <div>
 <span class="font-bold block">Local Recycling Hub</span>
-<span class="text-xs text-on-surface dark:text-zinc-100">0.4 miles away</span>
+<span class="text-xs text-on-surface-variant">0.4 miles away</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward_ios</span>
 </div>
-<div class="flex items-center justify-between p-space-sm hover:bg-surface-container dark:bg-zinc-800 rounded-lg transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-space-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer group">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-secondary">location_on</span>
 <div>
 <span class="font-bold block">Community Waste Center</span>
-<span class="text-xs text-on-surface dark:text-zinc-100">1.2 miles away</span>
+<span class="text-xs text-on-surface-variant">1.2 miles away</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward_ios</span>
@@ -258,22 +258,22 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full border-t border-slate-200 dark:border-zinc-800 bg-slate-50 mt-auto">
+<footer class="w-full border-t border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900 mt-auto">
 <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-4">
 <div class="flex flex-col gap-2">
-<div class="font-bold text-slate-900 dark:text-white font-body-lg">EcoAI</div>
-<p class="text-slate-500 font-body-md text-sm">© 2024 EcoAI. Empowering sustainable habits.</p>
+<div class="font-bold text-slate-900 dark:text-zinc-100 font-body-lg">EcoAI</div>
+<p class="text-slate-500 dark:text-zinc-400 font-body-md text-sm">© 2024 EcoAI. Empowering sustainable habits.</p>
 </div>
 <div class="flex gap-space-lg">
-<a class="text-slate-500 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Privacy</a>
-<a class="text-slate-500 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Terms</a>
-<a class="text-slate-500 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">Support</a>
-<a class="text-slate-500 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">API</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Privacy</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Terms</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">Support</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">API</a>
 </div>
 </div>
 </footer>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-zinc-900 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
 <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="index.html">
 <span class="material-symbols-outlined" data-icon="home">home</span>
 <span class="font-['Inter'] text-[10px] font-medium">Home</span>
@@ -296,286 +296,286 @@
 </a>
 </nav>
 <script>
- const URL = "./model/";
- let model, webcam, labelContainer, maxPredictions;
+    const URL = "./model/";
+    let model, webcam, labelContainer, maxPredictions;
 
- const resultLabel = document.getElementById('result-label');
- const confidenceBar = document.getElementById('confidence-bar');
- const confidenceText = document.getElementById('confidence-text');
- const binText = document.getElementById('bin-text');
- const ecoTip = document.getElementById('eco-tip');
- const previewImg = document.getElementById('preview-img');
- const webcamVideo = document.getElementById('webcam-video');
- const scanningIndicator = document.getElementById('scanning-indicator');
+    const resultLabel = document.getElementById('result-label');
+    const confidenceBar = document.getElementById('confidence-bar');
+    const confidenceText = document.getElementById('confidence-text');
+    const binText = document.getElementById('bin-text');
+    const ecoTip = document.getElementById('eco-tip');
+    const previewImg = document.getElementById('preview-img');
+    const webcamVideo = document.getElementById('webcam-video');
+    const scanningIndicator = document.getElementById('scanning-indicator');
 
- const metaMap = {
- "Recycleable": {
- material: "Plastic / Glass / Paper",
- bin: "Blue Bin",
- color: "#2563eb",
- tip: "Rinse before recycling to prevent contamination of the entire batch."
- },
- "Organic": {
- material: "Food Scraps / Yard Waste",
- bin: "Green Bin",
- color: "#10b981",
- tip: "This can be turned into nutrient-rich soil! Ensure no plastic is mixed in."
- },
- "NonRecycleable": {
- material: "Residual Waste",
- bin: "Black/Red Bin",
- color: "#ef4444",
- tip: "These items cannot be recycled. Try to find reusable alternatives in the future."
- },
- "Hazard": {
- material: "E-Waste / Chemicals",
- bin: "Specialty Bin",
- color: "#f59e0b",
- tip: "Hazardous waste needs special handling. Locate a nearby collection center."
- }
- };
+    const metaMap = {
+        "Recycleable": {
+            material: "Plastic / Glass / Paper",
+            bin: "Blue Bin",
+            color: "#2563eb",
+            tip: "Rinse before recycling to prevent contamination of the entire batch."
+        },
+        "Organic": {
+            material: "Food Scraps / Yard Waste",
+            bin: "Green Bin",
+            color: "#10b981",
+            tip: "This can be turned into nutrient-rich soil! Ensure no plastic is mixed in."
+        },
+        "NonRecycleable": {
+            material: "Residual Waste",
+            bin: "Black/Red Bin",
+            color: "#ef4444",
+            tip: "These items cannot be recycled. Try to find reusable alternatives in the future."
+        },
+        "Hazard": {
+            material: "E-Waste / Chemicals",
+            bin: "Specialty Bin",
+            color: "#f59e0b",
+            tip: "Hazardous waste needs special handling. Locate a nearby collection center."
+        }
+    };
 
- let currentFacingMode = "user";
+    let currentFacingMode = "user";
 
- const liveBadge = document.getElementById('live-badge');
- let isLiveMode = false;
- let predictionInterval;
+    const liveBadge = document.getElementById('live-badge');
+    let isLiveMode = false;
+    let predictionInterval;
 
- async function init() {
- try {
- const modelURL = URL + "model.json";
- const metadataURL = URL + "metadata.json";
- model = await tmImage.load(modelURL, metadataURL);
- maxPredictions = model.getTotalClasses();
- console.log("Model Loaded Successfully");
- } catch (e) {
- console.error("Failed to load model:", e);
- ecoTip.innerText = "Error: Failed to load the AI model. Ensure you are running on a local server (http://localhost).";
- }
- }
+    async function init() {
+        try {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            console.log("Model Loaded Successfully");
+        } catch (e) {
+            console.error("Failed to load model:", e);
+            ecoTip.innerText = "Error: Failed to load the AI model. Ensure you are running on a local server (http://localhost).";
+        }
+    }
 
- init();
+    init();
 
- // Webcam setup
- async function setupWebcam() {
- if (location.hostname === "127.0.0.1") {
- if (confirm("You are using 127.0.0.1. Many browsers (like Zen/Firefox) block cameras on this address. Would you like to switch to http://localhost:8000/classify.html?")) {
- location.href = location.href.replace("127.0.0.1", "localhost");
- return;
- }
- }
+    // Webcam setup
+    async function setupWebcam() {
+        if (location.hostname === "127.0.0.1") {
+            if (confirm("You are using 127.0.0.1. Many browsers (like Zen/Firefox) block cameras on this address. Would you like to switch to http://localhost:8000/classify.html?")) {
+                location.href = location.href.replace("127.0.0.1", "localhost");
+                return;
+            }
+        }
 
- const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
- if (!window.isSecureContext && !isLocal) {
- throw new Error("Webcam requires a secure context (HTTPS).");
- }
- 
- // Use square internal resolution (better for AI model)
- // CSS 'object-cover' will handle the cropping for the 3:4 mobile UI
- const size = 400;
- 
- // Use currentFacingMode. Rear camera (environment) should NOT be flipped.
- const flip = currentFacingMode === "user";
- webcam = new tmImage.Webcam(size, size, flip); 
- 
- try {
- // Try setup with facingMode
- await webcam.setup({ facingMode: currentFacingMode }); 
- await webcam.play();
- } catch (err) {
- console.warn("Standard webcam setup failed, trying fallback...", err);
- try {
- // Fallback: try without any constraints
- await webcam.setup({}); 
- await webcam.play();
- } catch (err2) {
- if (err2.name === "AbortError") {
- throw new Error("Zen Browser blocked the camera. Please disable 'Enhanced Tracking Protection' (the shield icon) for this site.");
- }
- throw err2;
- }
- }
- 
- previewImg.classList.add('hidden');
- webcamVideo.classList.add('hidden');
- 
- // Clear previous canvas if any
- const container = document.getElementById('webcam-container');
- const existingCanvas = container.querySelector('canvas');
- if (existingCanvas) existingCanvas.remove();
- 
- // Ensure canvas fills the container completely (object-cover)
- webcam.canvas.className = "absolute inset-0 w-full h-full object-cover z-10";
- container.appendChild(webcam.canvas);
- 
- // Show switch camera button, live badge, and framing corners
- document.getElementById('switch-camera-btn').classList.remove('hidden');
- document.getElementById('framing-corners').classList.remove('hidden');
- liveBadge.classList.remove('hidden');
- isLiveMode = true;
- 
- window.requestAnimationFrame(loop);
- startLivePrediction();
- }
+        const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+        if (!window.isSecureContext && !isLocal) {
+            throw new Error("Webcam requires a secure context (HTTPS).");
+        }
+        
+        // Use square internal resolution (better for AI model)
+        // CSS 'object-cover' will handle the cropping for the 3:4 mobile UI
+        const size = 400;
+        
+        // Use currentFacingMode. Rear camera (environment) should NOT be flipped.
+        const flip = currentFacingMode === "user";
+        webcam = new tmImage.Webcam(size, size, flip); 
+        
+        try {
+            // Try setup with facingMode
+            await webcam.setup({ facingMode: currentFacingMode }); 
+            await webcam.play();
+        } catch (err) {
+            console.warn("Standard webcam setup failed, trying fallback...", err);
+            try {
+                // Fallback: try without any constraints
+                await webcam.setup({}); 
+                await webcam.play();
+            } catch (err2) {
+                if (err2.name === "AbortError") {
+                    throw new Error("Zen Browser blocked the camera. Please disable 'Enhanced Tracking Protection' (the shield icon) for this site.");
+                }
+                throw err2;
+            }
+        }
+        
+        previewImg.classList.add('hidden');
+        webcamVideo.classList.add('hidden');
+        
+        // Clear previous canvas if any
+        const container = document.getElementById('webcam-container');
+        const existingCanvas = container.querySelector('canvas');
+        if (existingCanvas) existingCanvas.remove();
+        
+        // Ensure canvas fills the container completely (object-cover)
+        webcam.canvas.className = "absolute inset-0 w-full h-full object-cover z-10";
+        container.appendChild(webcam.canvas);
+        
+        // Show switch camera button, live badge, and framing corners
+        document.getElementById('switch-camera-btn').classList.remove('hidden');
+        document.getElementById('framing-corners').classList.remove('hidden');
+        liveBadge.classList.remove('hidden');
+        isLiveMode = true;
+        
+        window.requestAnimationFrame(loop);
+        startLivePrediction();
+    }
 
- async function loop() {
- if (webcam && webcam.canvas) {
- webcam.update();
- window.requestAnimationFrame(loop);
- }
- }
+    async function loop() {
+        if (webcam && webcam.canvas) {
+            webcam.update();
+            window.requestAnimationFrame(loop);
+        }
+    }
 
- function startLivePrediction() {
- if (predictionInterval) clearInterval(predictionInterval);
- predictionInterval = setInterval(async () => {
- if (isLiveMode && model && webcam && webcam.canvas) {
- const prediction = await model.predict(webcam.canvas);
- let best = { probability: 0 };
- prediction.forEach(p => {
- if (p.probability > best.probability) best = p;
- });
- updateUI(best);
- }
- }, 300); // Predict every 300ms for performance
- }
+    function startLivePrediction() {
+        if (predictionInterval) clearInterval(predictionInterval);
+        predictionInterval = setInterval(async () => {
+            if (isLiveMode && model && webcam && webcam.canvas) {
+                const prediction = await model.predict(webcam.canvas);
+                let best = { probability: 0 };
+                prediction.forEach(p => {
+                    if (p.probability > best.probability) best = p;
+                });
+                updateUI(best);
+            }
+        }, 300); // Predict every 300ms for performance
+    }
 
- document.getElementById('switch-camera-btn').addEventListener('click', async () => {
- currentFacingMode = currentFacingMode === "user" ? "environment" : "user";
- if (webcam) {
- webcam.stop();
- }
- await setupWebcam();
- });
+    document.getElementById('switch-camera-btn').addEventListener('click', async () => {
+        currentFacingMode = currentFacingMode === "user" ? "environment" : "user";
+        if (webcam) {
+            webcam.stop();
+        }
+        await setupWebcam();
+    });
 
- document.getElementById('webcam-btn').addEventListener('click', async () => {
- const btn = document.getElementById('webcam-btn');
- const originalText = btn.innerHTML;
- try {
- btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Starting...';
- btn.disabled = true;
- await setupWebcam();
- btn.classList.add('bg-white dark:bg-zinc-900 dark:bg-zinc-900', 'text-primary');
- document.getElementById('upload-btn').classList.remove('bg-white dark:bg-zinc-900 dark:bg-zinc-900', 'text-primary');
- } catch (e) {
- console.error("Camera Error:", e);
- if (e.name === "NotAllowedError" || e.name === "PermissionDeniedError") {
- alert("Camera access was denied. Please click the camera icon in your browser address bar and select 'Allow'.");
- } else if (e.name === "NotFoundError" || e.name === "DevicesNotFoundError") {
- alert("No webcam found on this device.");
- } else if (e.name === "NotReadableError" || e.name === "TrackStartError") {
- alert("Webcam is already in use by another application.");
- } else {
- alert("Webcam error: " + e.message);
- }
- } finally {
- btn.innerHTML = originalText;
- btn.disabled = false;
- }
- });
+    document.getElementById('webcam-btn').addEventListener('click', async () => {
+        const btn = document.getElementById('webcam-btn');
+        const originalText = btn.innerHTML;
+        try {
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Starting...';
+            btn.disabled = true;
+            await setupWebcam();
+            btn.classList.add('bg-white', 'text-primary');
+            document.getElementById('upload-btn').classList.remove('bg-white', 'text-primary');
+        } catch (e) {
+            console.error("Camera Error:", e);
+            if (e.name === "NotAllowedError" || e.name === "PermissionDeniedError") {
+                alert("Camera access was denied. Please click the camera icon in your browser address bar and select 'Allow'.");
+            } else if (e.name === "NotFoundError" || e.name === "DevicesNotFoundError") {
+                alert("No webcam found on this device.");
+            } else if (e.name === "NotReadableError" || e.name === "TrackStartError") {
+                alert("Webcam is already in use by another application.");
+            } else {
+                alert("Webcam error: " + e.message);
+            }
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    });
 
- document.getElementById('upload-btn').addEventListener('click', () => {
- document.getElementById('file-input').click();
- });
+    document.getElementById('upload-btn').addEventListener('click', () => {
+        document.getElementById('file-input').click();
+    });
 
- document.getElementById('file-input').addEventListener('change', (e) => {
- const file = e.target.files[0];
- if (file) {
- const reader = new FileReader();
- reader.onload = (event) => {
- previewImg.src = event.target.result;
- previewImg.classList.remove('hidden');
- 
- // Stop live mode
- isLiveMode = false;
- liveBadge.classList.add('hidden');
- document.getElementById('framing-corners').classList.add('hidden');
- if (predictionInterval) clearInterval(predictionInterval);
+    document.getElementById('file-input').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                previewImg.src = event.target.result;
+                previewImg.classList.remove('hidden');
+                
+                // Stop live mode
+                isLiveMode = false;
+                liveBadge.classList.add('hidden');
+                document.getElementById('framing-corners').classList.add('hidden');
+                if (predictionInterval) clearInterval(predictionInterval);
 
- // Remove webcam canvas if it exists
- const container = document.getElementById('webcam-container');
- const existingCanvas = container.querySelector('canvas');
- if (existingCanvas) existingCanvas.remove();
+                // Remove webcam canvas if it exists
+                const container = document.getElementById('webcam-container');
+                const existingCanvas = container.querySelector('canvas');
+                if (existingCanvas) existingCanvas.remove();
 
- if (webcam) {
- webcam.stop();
- webcam = null;
- }
- document.getElementById('upload-btn').classList.add('bg-white dark:bg-zinc-900 dark:bg-zinc-900', 'text-primary');
- document.getElementById('webcam-btn').classList.remove('bg-white dark:bg-zinc-900 dark:bg-zinc-900', 'text-primary');
+                if (webcam) {
+                    webcam.stop();
+                    webcam = null;
+                }
+                document.getElementById('upload-btn').classList.add('bg-white', 'text-primary');
+                document.getElementById('webcam-btn').classList.remove('bg-white', 'text-primary');
 
- // Auto-classify uploaded photo after a short delay to ensure image is loaded
- setTimeout(async () => {
- if (model) {
- const prediction = await model.predict(previewImg);
- let best = { probability: 0 };
- prediction.forEach(p => {
- if (p.probability > best.probability) best = p;
- });
- updateUI(best);
- }
- }, 100);
- };
- reader.readAsDataURL(file);
- }
- });
+                // Auto-classify uploaded photo after a short delay to ensure image is loaded
+                setTimeout(async () => {
+                    if (model) {
+                        const prediction = await model.predict(previewImg);
+                        let best = { probability: 0 };
+                        prediction.forEach(p => {
+                            if (p.probability > best.probability) best = p;
+                        });
+                        updateUI(best);
+                    }
+                }, 100);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
 
 
 
- function updateUI(prediction) {
- const rawLabel = prediction.className;
- const confidence = Math.round(prediction.probability * 100);
- 
- // Robust mapping and cleaning
- let displayLabel = "Unknown";
- let metaKey = "NonRecycleable";
- 
- // Remove dots and normalize for comparison
- const normalized = rawLabel.toLowerCase().replace(/\./g, "");
+    function updateUI(prediction) {
+        const rawLabel = prediction.className;
+        const confidence = Math.round(prediction.probability * 100);
+        
+        // Robust mapping and cleaning
+        let displayLabel = "Unknown";
+        let metaKey = "NonRecycleable";
+        
+        // Remove dots and normalize for comparison
+        const normalized = rawLabel.toLowerCase().replace(/\./g, "");
 
- if (normalized.includes("nonrecycle") || normalized.includes("non-recycle")) {
- displayLabel = "Non-Recyclable";
- metaKey = "NonRecycleable";
- } else if (normalized.includes("recycle")) {
- displayLabel = "Recyclable";
- metaKey = "Recycleable";
- } else if (normalized.includes("organic")) {
- displayLabel = "Organic";
- metaKey = "Organic";
- } else if (normalized.includes("hazard")) {
- displayLabel = "Hazardous";
- metaKey = "Hazard";
- }
- 
- resultLabel.innerText = displayLabel;
- confidenceText.innerText = `${confidence}% Confidence`;
- confidenceBar.style.width = `${confidence}%`;
- 
- const meta = metaMap[metaKey];
- 
- binText.innerText = meta.bin;
- binText.style.color = meta.color;
- ecoTip.innerText = meta.tip;
- }
+        if (normalized.includes("nonrecycle") || normalized.includes("non-recycle")) {
+            displayLabel = "Non-Recyclable";
+            metaKey = "NonRecycleable";
+        } else if (normalized.includes("recycle")) {
+            displayLabel = "Recyclable";
+            metaKey = "Recycleable";
+        } else if (normalized.includes("organic")) {
+            displayLabel = "Organic";
+            metaKey = "Organic";
+        } else if (normalized.includes("hazard")) {
+            displayLabel = "Hazardous";
+            metaKey = "Hazard";
+        }
+        
+        resultLabel.innerText = displayLabel;
+        confidenceText.innerText = `${confidence}% Confidence`;
+        confidenceBar.style.width = `${confidence}%`;
+        
+        const meta = metaMap[metaKey];
+        
+        binText.innerText = meta.bin;
+        binText.style.color = meta.color;
+        ecoTip.innerText = meta.tip;
+    }
 </script>
 <script>
- const themeToggleBtn = document.getElementById('theme-toggle');
- const darkIcon = document.getElementById('theme-toggle-dark-icon');
- const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
 
- if (themeToggleBtn) {
- if (document.documentElement.classList.contains('dark')) {
- lightIcon.classList.remove('hidden');
- } else {
- darkIcon.classList.remove('hidden');
- }
+    if (themeToggleBtn) {
+        if (document.documentElement.classList.contains('dark')) {
+            lightIcon.classList.remove('hidden');
+        } else {
+            darkIcon.classList.remove('hidden');
+        }
 
- themeToggleBtn.addEventListener('click', () => {
- document.documentElement.classList.toggle('dark');
- const isDark = document.documentElement.classList.contains('dark');
- localStorage.setItem('theme', isDark ? 'dark' : 'light');
- darkIcon.classList.toggle('hidden');
- lightIcon.classList.toggle('hidden');
- });
- }
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+        });
+    }
 </script>
 </body></html>
