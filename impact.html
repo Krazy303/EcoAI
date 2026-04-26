@@ -10,144 +10,144 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
+ if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+ document.documentElement.classList.add('dark');
+ } else {
+ document.documentElement.classList.remove('dark');
+ }
 </script>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-bright": "#f8f9fa",
-                    "secondary-fixed-dim": "#92ccff",
-                    "on-tertiary-container": "#593f35",
-                    "surface": "#f8f9fa",
-                    "on-error": "#ffffff",
-                    "surface-variant": "#e1e3e4",
-                    "error-container": "#ffdad6",
-                    "tertiary-fixed-dim": "#e4beb2",
-                    "tertiary-fixed": "#ffdbce",
-                    "primary-fixed-dim": "#4ae183",
-                    "on-tertiary-fixed-variant": "#5b4137",
-                    "on-primary-container": "#005027",
-                    "surface-tint": "#006d37",
-                    "on-surface-variant": "#3d4a3e",
-                    "on-secondary-fixed-variant": "#004b73",
-                    "surface-container-highest": "#e1e3e4",
-                    "surface-container-high": "#e7e8e9",
-                    "on-error-container": "#93000a",
-                    "secondary-container": "#5cb8fd",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#00476e",
-                    "primary-container": "#2ecc71",
-                    "inverse-primary": "#4ae183",
-                    "on-tertiary": "#ffffff",
-                    "primary": "#006d37",
-                    "surface-dim": "#d9dadb",
-                    "secondary-fixed": "#cce5ff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary-fixed": "#2b160f",
-                    "on-background": "#191c1d",
-                    "outline-variant": "#bbcbbb",
-                    "tertiary": "#75584d",
-                    "tertiary-container": "#cfab9f",
-                    "inverse-surface": "#2e3132",
-                    "on-primary": "#ffffff",
-                    "primary-fixed": "#6bfe9c",
-                    "secondary": "#006397",
-                    "outline": "#6c7b6d",
-                    "surface-container": "#edeeef",
-                    "on-secondary-fixed": "#001d31",
-                    "inverse-on-surface": "#f0f1f2",
-                    "background": "#f8f9fa",
-                    "surface-container-low": "#f3f4f5",
-                    "on-primary-fixed-variant": "#005228",
-                    "on-surface": "#191c1d",
-                    "on-primary-fixed": "#00210c"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "space-xl": "48px",
-                    "space-md": "16px",
-                    "space-lg": "24px",
-                    "unit": "8px",
-                    "container-max": "1280px",
-                    "space-sm": "8px",
-                    "margin": "32px",
-                    "space-xxl": "80px",
-                    "space-xs": "4px",
-                    "gutter": "24px"
-            },
-            "fontFamily": {
-                    "body-md": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "h1": ["Inter"],
-                    "h2": ["Inter"],
-                    "label-md": ["Inter"],
-                    "label-sm": ["Inter"],
-                    "h3": ["Inter"]
-            },
-            "fontSize": {
-                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
-                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
-                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+ tailwind.config = {
+ darkMode: "class",
+ theme: {
+ extend: {
+ "colors": {
+ "surface-bright": "#f8f9fa",
+ "secondary-fixed-dim": "#92ccff",
+ "on-tertiary-container": "#593f35",
+ "surface": "#f8f9fa",
+ "on-error": "#ffffff",
+ "surface-variant": "#e1e3e4",
+ "error-container": "#ffdad6",
+ "tertiary-fixed-dim": "#e4beb2",
+ "tertiary-fixed": "#ffdbce",
+ "primary-fixed-dim": "#4ae183",
+ "on-tertiary-fixed-variant": "#5b4137",
+ "on-primary-container": "#005027",
+ "surface-tint": "#006d37",
+ "on-surface-variant": "#3d4a3e",
+ "on-secondary-fixed-variant": "#004b73",
+ "surface-container-highest": "#e1e3e4",
+ "surface-container-high": "#e7e8e9",
+ "on-error-container": "#93000a",
+ "secondary-container": "#5cb8fd",
+ "error": "#ba1a1a",
+ "on-secondary-container": "#00476e",
+ "primary-container": "#2ecc71",
+ "inverse-primary": "#4ae183",
+ "on-tertiary": "#ffffff",
+ "primary": "#006d37",
+ "surface-dim": "#d9dadb",
+ "secondary-fixed": "#cce5ff",
+ "surface-container-lowest": "#ffffff",
+ "on-secondary": "#ffffff",
+ "on-tertiary-fixed": "#2b160f",
+ "on-background": "#191c1d",
+ "outline-variant": "#bbcbbb",
+ "tertiary": "#75584d",
+ "tertiary-container": "#cfab9f",
+ "inverse-surface": "#2e3132",
+ "on-primary": "#ffffff",
+ "primary-fixed": "#6bfe9c",
+ "secondary": "#006397",
+ "outline": "#6c7b6d",
+ "surface-container": "#edeeef",
+ "on-secondary-fixed": "#001d31",
+ "inverse-on-surface": "#f0f1f2",
+ "background": "#f8f9fa",
+ "surface-container-low": "#f3f4f5",
+ "on-primary-fixed-variant": "#005228",
+ "on-surface": "#191c1d",
+ "on-primary-fixed": "#00210c"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "space-xl": "48px",
+ "space-md": "16px",
+ "space-lg": "24px",
+ "unit": "8px",
+ "container-max": "1280px",
+ "space-sm": "8px",
+ "margin": "32px",
+ "space-xxl": "80px",
+ "space-xs": "4px",
+ "gutter": "24px"
+ },
+ "fontFamily": {
+ "body-md": ["Inter"],
+ "body-lg": ["Inter"],
+ "h1": ["Inter"],
+ "h2": ["Inter"],
+ "label-md": ["Inter"],
+ "label-sm": ["Inter"],
+ "h3": ["Inter"]
+ },
+ "fontSize": {
+ "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+ "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+ "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+ "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+ "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+ "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+ "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}]
+ }
+ },
+ },
+ }
+ </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .chart-bar { 
-            transition: height 1s cubic-bezier(0.4, 0, 0.2, 1); 
-            animation: growUp 1.2s ease-out forwards;
-            transform-origin: bottom;
-        }
-        @keyframes growUp {
-            from { transform: scaleY(0); }
-            to { transform: scaleY(1); }
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-    </style>
+ .material-symbols-outlined {
+ font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+ }
+ .chart-bar { 
+ transition: height 1s cubic-bezier(0.4, 0, 0.2, 1); 
+ animation: growUp 1.2s ease-out forwards;
+ transform-origin: bottom;
+ }
+ @keyframes growUp {
+ from { transform: scaleY(0); }
+ to { transform: scaleY(1); }
+ }
+ .glass-panel {
+ background: rgba(255, 255, 255, 0.8);
+ backdrop-filter: blur(12px);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+ </style>
 </head>
-<body class="bg-surface-bright dark:bg-zinc-950 font-body-md text-on-surface dark:text-zinc-100 selection:bg-primary-container selection:text-on-primary-container">
+<body class="dark:bg-zinc-950 bg-surface-bright font-body-md text-on-surface dark:text-zinc-100 selection:bg-primary-container selection: text-on-primary-container dark:text-zinc-100">
 <!-- TopAppBar -->
-<header class="bg-white/90 dark:bg-slate-950/90 backdrop-blur-md font-['Inter'] antialiased text-sm tracking-wide docked full-width top-0 sticky z-50 border-b border-slate-100 dark:border-slate-800 shadow-[0_2px_4px_rgba(46,204,113,0.05)]">
+<header class="bg-white dark:bg-zinc-900 dark:bg-slate-950/90 backdrop-blur-md font-['Inter'] antialiased text-sm tracking-wide docked full-width top-0 sticky z-50 border-b border-slate-100 dark:border-slate-800 shadow-[0_2px_4px_rgba(46,204,113,0.05)]">
 <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
 <div class="text-xl font-bold tracking-tight text-emerald-600 dark:text-emerald-400"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/></div>
 <nav class="hidden md:flex items-center space-x-8">
-<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="index.html">Home</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="classify.html">Classify</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="education.html">Education</a>
+<a class="text-slate-600 dark:text-zinc-400 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="index.html">Home</a>
+<a class="text-slate-600 dark:text-zinc-400 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="classify.html">Classify</a>
+<a class="text-slate-600 dark:text-zinc-400 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="education.html">Education</a>
 <a class="text-emerald-600 dark:text-emerald-400 font-bold border-b-2 border-emerald-600 dark:border-emerald-400 pb-1" href="impact.html">Impact</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="about.html">About</a>
+<a class="text-slate-600 dark:text-zinc-400 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="about.html">About</a>
 </nav>
 <div class="flex items-center space-x-4">
-<button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
-    <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
-    <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
+<button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+ <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
+ <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
 </button>
-<button class="material-symbols-outlined text-slate-600 hover:bg-emerald-50/50 p-2 rounded-lg transition-all active:scale-95">account_circle</button>
+<button class="material-symbols-outlined text-slate-600 dark:text-zinc-400 hover:bg-emerald-50/50 p-2 rounded-lg transition-all active:scale-95">account_circle</button>
 </div>
 </div>
 </header>
@@ -156,16 +156,16 @@
 <section class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl items-center">
 <div class="space-y-space-md">
 <span class="px-4 py-1.5 rounded-full bg-primary-container/10 text-primary font-label-sm uppercase">National Overview 2024</span>
-<h1 class="font-h1 text-h1 text-on-surface leading-tight">The Weight of Waste in India</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Every year, India generates a staggering amount of waste. While the numbers are immense, the opportunity for transformation is even greater. See the reality of our current system and how you are part of the solution.</p>
+<h1 class="font-h1 text-h1 text-on-surface dark:text-zinc-100 leading-tight">The Weight of Waste in India</h1>
+<p class="font-body-lg text-body-lg text-on-surface dark:text-zinc-100 max-w-xl">Every year, India generates a staggering amount of waste. While the numbers are immense, the opportunity for transformation is even greater. See the reality of our current system and how you are part of the solution.</p>
 <div class="flex flex-wrap gap-space-md pt-space-md">
-<div class="flex-1 min-w-[200px] p-6 rounded-xl bg-white border border-outline-variant shadow-sm">
+<div class="flex-1 min-w-[200px] p-6 rounded-xl bg-white dark:bg-zinc-900 border border-outline-variant shadow-sm">
 <div class="text-primary font-h2 text-h2">62M</div>
-<div class="font-label-md text-on-surface-variant">Tonnes Generated Annually</div>
+<div class="font-label-md text-on-surface dark:text-zinc-100">Tonnes Generated Annually</div>
 </div>
 <div class="flex-1 min-w-[200px] p-6 rounded-xl bg-error-container/20 border border-error/10 shadow-sm">
 <div class="text-error font-h2 text-h2">&lt;30%</div>
-<div class="font-label-md text-on-surface-variant">Waste Successfully Treated</div>
+<div class="font-label-md text-on-surface dark:text-zinc-100">Waste Successfully Treated</div>
 </div>
 </div>
 </div>
@@ -177,65 +177,65 @@
 <!-- Bento Grid Statistics -->
 <section class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-space-lg">
 <!-- Large Focus Card -->
-<div class="md:col-span-2 md:row-span-2 bg-white rounded-3xl p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
+<div class="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
 <div>
 <h3 class="font-h3 text-h3 mb-4">Waste Stream Distribution</h3>
-<p class="text-on-surface-variant font-body-md mb-8">India's urban waste composition reveals a high percentage of organic matter, offering massive potential for composting and energy recovery.</p>
+<p class=" text-on-surface dark:text-zinc-100 font-body-md mb-8">India's urban waste composition reveals a high percentage of organic matter, offering massive potential for composting and energy recovery.</p>
 </div>
 <div class="mt-8 space-y-8">
-    <!-- Area Distribution Bar -->
-    <div class="relative">
-        <div class="flex justify-between mb-2 text-label-sm font-bold uppercase tracking-wider text-on-surface-variant/70">
-            <span>Composition Breakdown</span>
-            <span>Total: 62M Tonnes</span>
-        </div>
-        <div class="w-full h-16 flex rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-container-low p-1">
-            <div class="h-full bg-primary rounded-l-xl transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 50%;">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">50%</div>
-            </div>
-            <div class="h-full bg-secondary transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 20%;">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">20%</div>
-            </div>
-            <div class="h-full bg-tertiary transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 15%;">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">15%</div>
-            </div>
-            <div class="h-full bg-surface-variant rounded-r-xl transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 15%;">
-                <div class="absolute inset-0 flex items-center justify-center text-on-surface-variant font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">15%</div>
-            </div>
-        </div>
-    </div>
+ <!-- Area Distribution Bar -->
+ <div class="relative">
+ <div class="flex justify-between mb-2 text-label-sm font-bold uppercase tracking-wider text-on-surface dark:text-zinc-100">
+ <span>Composition Breakdown</span>
+ <span>Total: 62M Tonnes</span>
+ </div>
+ <div class="w-full h-16 flex rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30 bg-surface-container dark:bg-zinc-800 p-1">
+ <div class="h-full bg-primary rounded-l-xl transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 50%;">
+ <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">50%</div>
+ </div>
+ <div class="h-full bg-secondary transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 20%;">
+ <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">20%</div>
+ </div>
+ <div class="h-full bg-tertiary transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 15%;">
+ <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">15%</div>
+ </div>
+ <div class="h-full bg-surface-variant rounded-r-xl transition-all duration-1000 chart-bar hover:brightness-110 cursor-pointer group relative" style="width: 15%;">
+ <div class="absolute inset-0 flex items-center justify-center text-on-surface dark:text-zinc-100 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">15%</div>
+ </div>
+ </div>
+ </div>
 
-    <!-- Legends Grid -->
-    <div class="grid grid-cols-2 gap-4">
-        <div class="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
-            <div class="w-3 h-3 rounded-full bg-primary"></div>
-            <div>
-                <div class="text-xs font-bold uppercase text-primary">Organic</div>
-                <div class="text-lg font-h2 leading-none">50%</div>
-            </div>
-        </div>
-        <div class="flex items-center gap-3 p-3 rounded-xl bg-secondary/5 border border-secondary-100">
-            <div class="w-3 h-3 rounded-full bg-secondary"></div>
-            <div>
-                <div class="text-xs font-bold uppercase text-secondary">Plastic</div>
-                <div class="text-lg font-h2 leading-none">20%</div>
-            </div>
-        </div>
-        <div class="flex items-center gap-3 p-3 rounded-xl bg-tertiary/5 border border-tertiary/10">
-            <div class="w-3 h-3 rounded-full bg-tertiary"></div>
-            <div>
-                <div class="text-xs font-bold uppercase text-tertiary">Paper</div>
-                <div class="text-lg font-h2 leading-none">15%</div>
-            </div>
-        </div>
-        <div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-high border border-outline-variant/30">
-            <div class="w-3 h-3 rounded-full bg-surface-variant"></div>
-            <div>
-                <div class="text-xs font-bold uppercase text-on-surface-variant">Others</div>
-                <div class="text-lg font-h2 leading-none">15%</div>
-            </div>
-        </div>
-    </div>
+ <!-- Legends Grid -->
+ <div class="grid grid-cols-2 gap-4">
+ <div class="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+ <div class="w-3 h-3 rounded-full bg-primary"></div>
+ <div>
+ <div class="text-xs font-bold uppercase text-primary">Organic</div>
+ <div class="text-lg font-h2 leading-none">50%</div>
+ </div>
+ </div>
+ <div class="flex items-center gap-3 p-3 rounded-xl bg-secondary/5 border border-secondary-100">
+ <div class="w-3 h-3 rounded-full bg-secondary"></div>
+ <div>
+ <div class="text-xs font-bold uppercase text-secondary">Plastic</div>
+ <div class="text-lg font-h2 leading-none">20%</div>
+ </div>
+ </div>
+ <div class="flex items-center gap-3 p-3 rounded-xl bg-tertiary/5 border border-tertiary/10">
+ <div class="w-3 h-3 rounded-full bg-tertiary"></div>
+ <div>
+ <div class="text-xs font-bold uppercase text-tertiary">Paper</div>
+ <div class="text-lg font-h2 leading-none">15%</div>
+ </div>
+ </div>
+ <div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container dark:bg-zinc-800 border border-outline-variant/30">
+ <div class="w-3 h-3 rounded-full bg-surface-variant"></div>
+ <div>
+ <div class="text-xs font-bold uppercase text-on-surface dark:text-zinc-100">Others</div>
+ <div class="text-lg font-h2 leading-none">15%</div>
+ </div>
+ </div>
+ </div>
 </div>
 </div>
 <!-- Small Info Card 1 -->
@@ -244,7 +244,7 @@
 <span class="material-symbols-outlined text-3xl">compost</span>
 </div>
 <h4 class="font-h3 text-h3 text-primary">31M Tonnes</h4>
-<p class="font-label-md text-on-surface-variant">Organic waste that could be composted instead of reaching landfills.</p>
+<p class="font-label-md text-on-surface dark:text-zinc-100">Organic waste that could be composted instead of reaching landfills.</p>
 </div>
 <!-- Small Info Card 2 -->
 <div class="bg-secondary/5 border border-secondary/10 rounded-3xl p-8 flex flex-col justify-center items-center text-center space-y-4">
@@ -252,11 +252,11 @@
 <span class="material-symbols-outlined text-3xl">factory</span>
 </div>
 <h4 class="font-h3 text-h3 text-secondary">4,000+</h4>
-<p class="font-label-md text-on-surface-variant">Urban local bodies needing integrated waste management systems.</p>
+<p class="font-label-md text-on-surface dark:text-zinc-100">Urban local bodies needing integrated waste management systems.</p>
 </div>
 </section>
 <!-- Personal Impact Section -->
-<section class="bg-surface-container rounded-[2.5rem] p-space-xl overflow-hidden relative">
+<section class="bg-surface-container dark:bg-zinc-800 rounded-[2.5rem] p-space-xl overflow-hidden relative">
 <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
 <span class="material-symbols-outlined text-[300px] translate-x-1/2 -translate-y-1/4" style="font-variation-settings: 'FILL' 1;">eco</span>
 </div>
@@ -264,39 +264,39 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div class="space-y-2">
 <h2 class="font-h2 text-h2">Your Personal Impact</h2>
-<p class="text-on-surface-variant font-body-lg">Every item you scan and classify correctly makes a difference.</p>
+<p class=" text-on-surface dark:text-zinc-100 font-body-lg">Every item you scan and classify correctly makes a difference.</p>
 </div>
 <button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md shadow-[0_2px_0_rgba(0,0,0,0.1)] active:translate-y-[2px] active:shadow-none transition-all">Download Full Report</button>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
 <!-- Stat Card 1 -->
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/50">
+<div class="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-sm border border-outline-variant/50">
 <span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
 <div class="text-h2 font-h2">1,248</div>
-<div class="text-label-md text-on-surface-variant">Items Scanned</div>
+<div class="text-label-md text-on-surface dark:text-zinc-100">Items Scanned</div>
 </div>
 <!-- Stat Card 2 -->
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/50">
+<div class="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-sm border border-outline-variant/50">
 <span class="material-symbols-outlined text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">co2</span>
 <div class="text-h2 font-h2">42.5 kg</div>
-<div class="text-label-md text-on-surface-variant">CO2 Offset Equivalent</div>
+<div class="text-label-md text-on-surface dark:text-zinc-100">CO2 Offset Equivalent</div>
 </div>
 <!-- Stat Card 3 -->
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/50">
+<div class="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-sm border border-outline-variant/50">
 <span class="material-symbols-outlined text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">water_drop</span>
 <div class="text-h2 font-h2">120 L</div>
-<div class="text-label-md text-on-surface-variant">Water Saved in Lifecycle</div>
+<div class="text-label-md text-on-surface dark:text-zinc-100">Water Saved in Lifecycle</div>
 </div>
 <!-- Stat Card 4 -->
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/50">
+<div class="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-sm border border-outline-variant/50">
 <span class="material-symbols-outlined text-emerald-600 mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
 <div class="text-h2 font-h2">78%</div>
-<div class="text-label-md text-on-surface-variant">Classification Accuracy</div>
+<div class="text-label-md text-on-surface dark:text-zinc-100">Classification Accuracy</div>
 <p class="text-[10px] text-error mt-2 leading-tight">Sorry! Our systems were not powerful enough to get more accurate results.</p>
 </div>
 </div>
 <!-- Recent Activity Visual -->
-<div class="bg-white p-8 rounded-3xl border border-outline-variant/50 shadow-sm">
+<div class="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-outline-variant/50 shadow-sm">
 <div class="flex justify-between items-center mb-6">
 <h4 class="font-h3 text-h3">Weekly Contribution</h4>
 <div class="flex gap-2">
@@ -305,19 +305,19 @@
 </div>
 </div>
 <div class="flex items-end h-40 gap-3 px-2">
-<div class="flex-1 bg-surface-container rounded-t-lg h-[30%] chart-bar"></div>
-<div class="flex-1 bg-surface-container rounded-t-lg h-[60%] chart-bar"></div>
+<div class="flex-1 bg-surface-container dark:bg-zinc-800 rounded-t-lg h-[30%] chart-bar"></div>
+<div class="flex-1 bg-surface-container dark:bg-zinc-800 rounded-t-lg h-[60%] chart-bar"></div>
 <div class="flex-1 bg-primary rounded-t-lg h-[85%] chart-bar relative group">
-    <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Peak Day</div>
+ <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Peak Day</div>
 </div>
-<div class="flex-1 bg-surface-container rounded-t-lg h-[45%] chart-bar"></div>
+<div class="flex-1 bg-surface-container dark:bg-zinc-800 rounded-t-lg h-[45%] chart-bar"></div>
 <div class="flex-1 bg-secondary rounded-t-lg h-[70%] chart-bar relative group">
-    <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Paper Focus</div>
+ <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Paper Focus</div>
 </div>
-<div class="flex-1 bg-surface-container rounded-t-lg h-[35%] chart-bar"></div>
+<div class="flex-1 bg-surface-container dark:bg-zinc-800 rounded-t-lg h-[35%] chart-bar"></div>
 <div class="flex-1 bg-primary rounded-t-lg h-[55%] chart-bar"></div>
 </div>
-<div class="flex justify-between mt-4 text-label-sm text-on-surface-variant">
+<div class="flex justify-between mt-4 text-label-sm text-on-surface dark:text-zinc-100">
 <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
 </div>
 </div>
@@ -325,11 +325,11 @@
 </section>
 <!-- Regional Map View (Static Representation) -->
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl items-stretch">
-<div class="lg:col-span-2 bg-white rounded-3xl border border-outline-variant shadow-sm overflow-hidden h-[500px] relative">
+<div class="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl border border-outline-variant shadow-sm overflow-hidden h-[500px] relative">
 <div class="absolute inset-0 bg-slate-100 flex items-center justify-center">
 <img alt="Simplified map of India highlighting waste collection zones" class="w-full h-full object-cover opacity-80" data-alt="Stylized map of India with green and yellow heat map indicators for waste management efficiency in different regions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKK9o9W3zFV-SsrP7NlSE5g8fkSJKyo2KpWE6VrkppdMOgUaXmtk9lcxTpNnRY7yV1e8jC_-0cbHFOQShbLY8MVpvYYOY7EIxdUJD6Do9SqVsVinkl7x9R-35UuYkwLZ7B1V-Ph8MXW0HRBOn8iNH3LUuXOJdPf6nhW3RQY5p7oPbm6bLOVaizRiGZ2ffy2oqTD7Ayh3fwtR-1fRwypyncjiq412U2FiP6cYFcyc2nWtweLUd5Yzz5WUBirZECtLQE-fZxJqHF9i1u"/>
 <div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
+<div class="bg-white dark:bg-zinc-900 backdrop-blur-md px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
 <span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
 <span class="font-label-md">Real-time Activity: Bengaluru</span>
 </div>
@@ -337,8 +337,8 @@
 </div>
 <!-- Map Overlay UI -->
 <div class="absolute bottom-6 left-6 right-6 flex justify-between pointer-events-none">
-<div class="bg-white/80 backdrop-blur p-4 rounded-xl border border-white/40 pointer-events-auto">
-<div class="text-label-sm font-bold uppercase text-on-surface-variant mb-2">Zone Analysis</div>
+<div class="bg-white dark:bg-zinc-900 backdrop-blur p-4 rounded-xl border border-white/40 pointer-events-auto">
+<div class="text-label-sm font-bold uppercase text-on-surface dark:text-zinc-100 mb-2">Zone Analysis</div>
 <div class="space-y-1">
 <div class="flex justify-between gap-8"><span class="text-label-sm">North</span><span class="font-bold">42%</span></div>
 <div class="flex justify-between gap-8"><span class="text-label-sm">South</span><span class="font-bold">68%</span></div>
@@ -350,24 +350,24 @@
 <div class="space-y-space-lg flex flex-col">
 <div class="flex-1 bg-tertiary-container/20 rounded-3xl p-8 border border-tertiary/10">
 <h4 class="font-h3 text-h3 text-on-tertiary-container mb-4">India's 2030 Goal</h4>
-<p class="text-on-tertiary-container font-body-md opacity-80">The Swachh Bharat Mission targets 100% scientific processing of municipal solid waste by 2030.</p>
+<p class=" text-on-tertiary-container font-body-md opacity-80">The Swachh Bharat Mission targets 100% scientific processing of municipal solid waste by 2030.</p>
 <div class="mt-8 space-y-2">
 <div class="flex justify-between text-label-sm"><span>Current Progress</span><span>28%</span></div>
-<div class="h-4 bg-white/50 rounded-full overflow-hidden">
+<div class="h-4 bg-white dark:bg-zinc-900 rounded-full overflow-hidden">
 <div class="h-full bg-tertiary" style="width: 28%;"></div>
 </div>
 </div>
 </div>
-<div class="flex-1 bg-white rounded-3xl p-8 border border-outline-variant flex flex-col justify-center items-center text-center">
+<div class="flex-1 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-outline-variant flex flex-col justify-center items-center text-center">
 <img alt="Sustainability success story" class="w-20 h-20 rounded-full object-cover mb-4" data-alt="Close-up of a diverse group of people's hands joined together over a pile of clean sorted recyclables, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAznuZ95iFKkE0H-hN7LjyvicK12tL5eukuacj1VodTMnB6OP9kmjVJlVYiDB58GskBIjBzGURSqiEUN2z8Yvb0pb7VcUtN3Gy2rPWdCEL_KoO_1axmQ0T_kJe2f85M97h-tRKCleU49Ia3GwYC2KFtrwuxuXBAylw2G6yt17JSTu5AiYDab7rOu_xWwQtwJcWNvS2_yyaDyAFw6oV2xMoTCyFPFLTxFP4mRdKCLoBkZX6ot0AhK7E0DX3EmvotMtx3-p4rRVKDyqIw"/>
 <h5 class="font-label-md font-bold">Community Champion</h5>
-<p class="text-label-sm text-on-surface-variant italic mt-2">"Using EcoAI helped our apartment complex reduce landfill waste by 40% in just three months."</p>
+<p class="text-label-sm text-on-surface dark:text-zinc-100 italic mt-2">"Using EcoAI helped our apartment complex reduce landfill waste by 40% in just three months."</p>
 </div>
 </div>
 </section>
 </main>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)] font-['Inter'] text-[10px] font-medium">
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-zinc-900 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)] font-['Inter'] text-[10px] font-medium">
 <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-emerald-500 transition-all active:scale-90 duration-150" href="index.html">
 <span class="material-symbols-outlined mb-1">home</span>
 <span>Home</span>
@@ -394,9 +394,9 @@
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-space-lg">
 <div class="space-y-2">
 <div class="text-xl font-bold text-emerald-600"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/></div>
-<p class="text-label-sm text-on-surface-variant dark:text-zinc-400">Empowering India towards zero waste.</p>
+<p class="text-label-sm text-on-surface dark:text-zinc-100">Empowering India towards zero waste.</p>
 </div>
-<div class="flex gap-space-lg text-label-sm font-medium text-on-surface-variant dark:text-zinc-400">
+<div class="flex gap-space-lg text-label-sm font-medium text-on-surface dark:text-zinc-100">
 <a class="hover:text-primary dark:hover:text-emerald-400" href="index.html">Privacy Policy</a>
 <a class="hover:text-primary dark:hover:text-emerald-400" href="index.html">Terms of Service</a>
 <a class="hover:text-primary dark:hover:text-emerald-400" href="education.html">Data Methodology</a>
@@ -405,24 +405,24 @@
 </div>
 </footer>
 <script>
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const darkIcon = document.getElementById('theme-toggle-dark-icon');
-    const lightIcon = document.getElementById('theme-toggle-light-icon');
+ const themeToggleBtn = document.getElementById('theme-toggle');
+ const darkIcon = document.getElementById('theme-toggle-dark-icon');
+ const lightIcon = document.getElementById('theme-toggle-light-icon');
 
-    if (themeToggleBtn) {
-        if (document.documentElement.classList.contains('dark')) {
-            lightIcon.classList.remove('hidden');
-        } else {
-            darkIcon.classList.remove('hidden');
-        }
+ if (themeToggleBtn) {
+ if (document.documentElement.classList.contains('dark')) {
+ lightIcon.classList.remove('hidden');
+ } else {
+ darkIcon.classList.remove('hidden');
+ }
 
-        themeToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            darkIcon.classList.toggle('hidden');
-            lightIcon.classList.toggle('hidden');
-        });
-    }
+ themeToggleBtn.addEventListener('click', () => {
+ document.documentElement.classList.toggle('dark');
+ const isDark = document.documentElement.classList.contains('dark');
+ localStorage.setItem('theme', isDark ? 'dark' : 'light');
+ darkIcon.classList.toggle('hidden');
+ lightIcon.classList.toggle('hidden');
+ });
+ }
 </script>
 </body></html>
