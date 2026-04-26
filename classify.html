@@ -362,14 +362,13 @@
             throw new Error("Webcam requires a secure context (HTTPS).");
         }
         
-        // Detect mobile and set dimensions to match the UI aspect ratio
-        const isMobile = window.innerWidth < 1024;
-        const width = isMobile ? 300 : 400;
-        const height = 400; // Keep 400 height for both, width changes
+        // Use square internal resolution (better for AI model)
+        // CSS 'object-cover' will handle the cropping for the 3:4 mobile UI
+        const size = 400;
         
         // Use currentFacingMode. Rear camera (environment) should NOT be flipped.
         const flip = currentFacingMode === "user";
-        webcam = new tmImage.Webcam(width, height, flip); 
+        webcam = new tmImage.Webcam(size, size, flip); 
         
         try {
             // Try setup with facingMode
@@ -392,11 +391,13 @@
         previewImg.classList.add('hidden');
         webcamVideo.classList.add('hidden');
         
+        // Clear previous canvas if any
         const container = document.getElementById('webcam-container');
         const existingCanvas = container.querySelector('canvas');
         if (existingCanvas) existingCanvas.remove();
         
-        webcam.canvas.className = "w-full h-full object-cover";
+        // Ensure canvas fills the container completely (object-cover)
+        webcam.canvas.className = "absolute inset-0 w-full h-full object-cover z-10";
         container.appendChild(webcam.canvas);
         
         // Show switch camera button and live badge
