@@ -1,0 +1,13 @@
+{
+  "name": "ecoai-website",
+  "version": "1.0.0",
+  "description": "EcoAI Waste Classifier Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

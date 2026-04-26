@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed": "#001d31",
+                "on-primary": "#ffffff",
+                "primary": "#006d37",
+                "tertiary-fixed": "#ffdbce",
+                "surface-dim": "#d9dadb",
+                "on-secondary-fixed-variant": "#004b73",
+                "surface": "#f8f9fa",
+                "outline-variant": "#bbcbbb",
+                "primary-fixed": "#6bfe9c",
+                "surface-tint": "#006d37",
+                "primary-container": "#2ecc71",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#cfab9f",
+                "inverse-on-surface": "#f0f1f2",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2e3132",
+                "on-background": "#191c1d",
+                "inverse-primary": "#4ae183",
+                "primary-fixed-dim": "#4ae183",
+                "on-secondary-container": "#00476e",
+                "on-surface-variant": "#3d4a3e",
+                "surface-bright": "#f8f9fa",
+                "on-primary-fixed-variant": "#005228",
+                "on-tertiary-fixed-variant": "#5b4137",
+                "secondary-container": "#5cb8fd",
+                "surface-container-low": "#f3f4f5",
+                "tertiary-fixed-dim": "#e4beb2",
+                "on-surface": "#191c1d",
+                "background": "#f8f9fa",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "secondary-fixed-dim": "#92ccff",
+                "surface-container": "#edeeef",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#75584d",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#005027",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e1e3e4",
+                "secondary-fixed": "#cce5ff",
+                "on-tertiary-container": "#593f35",
+                "secondary": "#006397",
+                "surface-container-high": "#e7e8e9",
+                "outline": "#6c7b6d",
+                "surface-container-highest": "#e1e3e4",
+                "on-primary-fixed": "#00210c",
+                "on-tertiary-fixed": "#2b160f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "space-xl": "48px",
+                "container-max": "1280px",
+                "space-lg": "24px",
+                "gutter": "24px",
+                "space-xxl": "80px",
+                "space-xs": "4px",
+                "space-md": "16px",
+                "unit": "8px",
+                "space-sm": "8px",
+                "margin": "32px"
+            },
+            "fontFamily": {
+                "h3": ["Inter"],
+                "body-md": ["Inter"],
+                "h2": ["Inter"],
+                "body-lg": ["Inter"],
+                "h1": ["Inter"],
+                "label-md": ["Inter"],
+                "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .shadow-level-1 { box-shadow: 0 2px 4px rgba(0, 75, 115, 0.05); }
+        .shadow-level-2 { box-shadow: 0 8px 16px rgba(0, 75, 115, 0.08); }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 shadow-sm dark:shadow-none font-['Inter'] antialiased dock full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center h-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-emerald-600 dark:text-emerald-400">EcoAI</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 dark:border-emerald-400 pb-1 font-semibold hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="index.html">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="classify.html">Classify</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="education.html">Education</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="impact.html">Impact</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="about.html">About</a>
+</div>
+<div class="flex items-center space-x-4">
+<a href="classify.html" class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md active:scale-95 transition-transform duration-150 shadow-level-1 hover:shadow-level-2 inline-block">Try it Now</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-space-xxl px-margin">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-space-xl items-center">
+<div class="z-10">
+<h1 class="font-h1 text-h1 text-on-background mb-space-md">Scan your trash. <br/><span class="text-primary">Save the planet.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg max-w-lg">Instantly classify your waste using AI to help build a cleaner world. Precision sorting at your fingertips.</p>
+<div class="flex flex-wrap gap-space-sm">
+<a href="classify.html" class="bg-primary text-on-primary font-label-md py-4 px-8 rounded-xl shadow-level-1 hover:shadow-level-2 transition-all active:translate-y-0.5 inline-block">Start Classifying</a>
+<a href="education.html" class="bg-surface-container text-primary font-label-md py-4 px-8 rounded-xl border border-outline-variant hover:bg-surface-container-high transition-colors inline-block">How it Works</a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-level-2 border border-outline-variant">
+<img alt="Sustainability" class="w-full h-auto object-cover" data-alt="EcoAI Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Scanner Section -->
+<!-- Categories Section -->
+<section class="py-space-xxl px-margin max-w-7xl mx-auto">
+<h2 class="font-h2 text-h2 text-on-background text-center mb-space-xl">Smart Categorization</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Recyclable -->
+<div class="bg-white p-space-lg rounded-2xl border border-outline-variant shadow-level-1 hover:shadow-level-2 transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">recycling</span>
+</div>
+<h3 class="font-h3 text-h3 mb-space-sm">♻️ Recyclable</h3>
+<p class="text-on-surface-variant mb-space-md font-body-md">Items that can be processed and used again to manufacture new products.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Plastic bottles
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Glass jars
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Cardboard boxes
+                        </li>
+</ul>
+</div>
+<!-- Compost -->
+<div class="bg-white p-space-lg rounded-2xl border border-outline-variant shadow-level-1 hover:shadow-level-2 transition-all group">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">compost</span>
+</div>
+<h3 class="font-h3 text-h3 mb-space-sm">🌱 Compost</h3>
+<p class="text-on-surface-variant mb-space-md font-body-md">Organic matter that can be broken down into nutrient-rich soil enhancer.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Fruit peels
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Coffee grounds
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Egg shells
+                        </li>
+</ul>
+</div>
+<!-- Landfill -->
+<div class="bg-white p-space-lg rounded-2xl border border-outline-variant shadow-level-1 hover:shadow-level-2 transition-all group">
+<div class="w-12 h-12 rounded-full bg-error/10 text-error flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">delete</span>
+</div>
+<h3 class="font-h3 text-h3 mb-space-sm">🗑️ Landfill</h3>
+<p class="text-on-surface-variant mb-space-md font-body-md">Non-recyclable items that are disposed of in burial sites.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Chip packets
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Dirty napkins
+                        </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Styrofoam
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Impact Section -->
+<section class="py-space-xxl px-margin bg-zinc-950 text-white overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl items-center">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-label-sm mb-4">THE PROBLEM</span>
+<h2 class="text-h1 font-h1 mb-6 leading-tight">62 Million Tonnes <br/><span class="text-emerald-400">of waste generated in India annually.</span></h2>
+<p class="text-zinc-400 text-body-lg font-body-lg mb-8">Less than 30% of this waste is currently treated. EcoAI is on a mission to bridge this gap using accessible AI technology.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-4xl font-bold text-emerald-400 mb-2">75%</div>
+<div class="text-zinc-500 font-label-md">Unsegregated waste</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-emerald-400 mb-2">2x</div>
+<div class="text-zinc-500 font-label-md">Efficiency growth potential</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-3xl overflow-hidden border border-emerald-900/50 shadow-2xl">
+<img alt="Environmental Impact" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="EcoAI Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 w-full border-t border-zinc-200 dark:border-zinc-800 pt-12 pb-8 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-emerald-700 dark:text-emerald-500 mb-4">EcoAI</div>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm leading-relaxed">Promoting a circular economy through advanced AI image recognition and community action.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-zinc-900 dark:text-zinc-100">Product</h4>
+<ul class="space-y-2">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="classify.html">Scanner AI</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="education.html">Education Center</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="about.html">API for Cities</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-zinc-900 dark:text-zinc-100">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="impact.html">Impact Report</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="about.html">Contact Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-sm" href="index.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-zinc-900 dark:text-zinc-100">Newsletter</h4>
+<div class="flex flex-col gap-2">
+<input class="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 rounded-lg text-sm px-4 py-2 focus:ring-emerald-500" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary py-2 rounded-lg text-sm font-semibold">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm">© 2024 EcoAI. Promoting a circular economy through AI.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-400 hover:text-emerald-600 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-emerald-600 cursor-pointer">group</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-emerald-600 cursor-pointer">mail</span>
+</div>
+</div>
+</footer>
+</body></html>
