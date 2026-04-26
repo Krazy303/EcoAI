@@ -315,26 +315,36 @@
     // Webcam setup
     async function setupWebcam() {
         if (location.hostname === "127.0.0.1") {
-            if (confirm("You are using 127.0.0.1. Many browsers (like Zen/Firefox) block cameras on this address. Would you like to switch to http://localhost:8000/classify.html for better compatibility?")) {
+            if (confirm("You are using 127.0.0.1. Many browsers (like Zen/Firefox) block cameras on this address. Would you like to switch to http://localhost:8000/classify.html?")) {
                 location.href = location.href.replace("127.0.0.1", "localhost");
                 return;
             }
         }
 
-        if (!window.isSecureContext && location.hostname !== "localhost") {
-            throw new Error("Webcam requires a secure context (HTTPS or localhost).");
+        const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+        if (!window.isSecureContext && !isLocal) {
+            throw new Error("Webcam requires a secure context (HTTPS).");
         }
         
-        // Firefox/Zen friendly constraints
-        const flip = true;
-        webcam = new tmImage.Webcam(400, 400, flip); 
+        // Create webcam with minimal constraints for maximum compatibility
+        webcam = new tmImage.Webcam(400, 400, true); 
         
         try {
-            await webcam.setup({ facingMode: "user" }); // Explicitly ask for front camera
+            // Try default setup first
+            await webcam.setup(); 
             await webcam.play();
         } catch (err) {
-            console.error("Internal Webcam Setup Error:", err);
-            throw err;
+            console.warn("Standard webcam setup failed, trying fallback...", err);
+            try {
+                // Fallback: try without any constraints
+                await webcam.setup({}); 
+                await webcam.play();
+            } catch (err2) {
+                if (err2.name === "AbortError") {
+                    throw new Error("Zen Browser blocked the camera. Please disable 'Enhanced Tracking Protection' (the shield icon) for this site.");
+                }
+                throw err2;
+            }
         }
         
         previewImg.classList.add('hidden');
