@@ -10,6 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+</script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -124,21 +131,27 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<body class="bg-background dark:bg-zinc-950 text-on-background dark:text-zinc-100 font-body-md min-h-screen flex flex-col">
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md shadow-sm">
+<header class="fixed top-0 w-full z-50 border-b border-slate-100 dark:border-zinc-800 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm">
 <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
 <div class="text-2xl font-black tracking-tight text-emerald-600"><div class="flex items-center gap-2"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/><span class="text-emerald-600">EcoAI</span></div></div>
 <div class="hidden md:flex items-center gap-space-lg">
-<a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="index.html">Home</a>
-<a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="education.html">Education</a>
-<a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="impact.html">Impact</a>
-<a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="about.html">About</a>
+<a class="text-slate-600 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors font-label-md" href="index.html">Home</a>
+<a class="text-slate-600 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors font-label-md" href="education.html">Education</a>
+<a class="text-slate-600 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors font-label-md" href="impact.html">Impact</a>
+<a class="text-slate-600 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors font-label-md" href="about.html">About</a>
 </div>
+<div class="flex items-center space-x-4">
+<button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+    <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
+    <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
+</button>
 <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg hover:bg-emerald-700 transition-all active:scale-95 duration-150 flex items-center gap-2">
 <span class="material-symbols-outlined">analytics</span>
                 Classify Waste
-            </button></nav>
+            </button>
+</div></nav>
 </header>
 <!-- Main Content Canvas -->
 <main class="flex-grow pt-24 pb-space-xxl px-margin max-w-7xl mx-auto w-full">
@@ -245,17 +258,17 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full border-t border-slate-200 bg-slate-50 mt-auto">
+<footer class="w-full border-t border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900 mt-auto">
 <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-4">
 <div class="flex flex-col gap-2">
-<div class="font-bold text-slate-900 font-body-lg">EcoAI</div>
-<p class="text-slate-500 font-body-md text-sm">© 2024 EcoAI. Empowering sustainable habits.</p>
+<div class="font-bold text-slate-900 dark:text-zinc-100 font-body-lg">EcoAI</div>
+<p class="text-slate-500 dark:text-zinc-400 font-body-md text-sm">© 2024 EcoAI. Empowering sustainable habits.</p>
 </div>
 <div class="flex gap-space-lg">
-<a class="text-slate-500 hover:text-emerald-500 font-label-md hover:underline transition-opacity" href="index.html">Privacy</a>
-<a class="text-slate-500 hover:text-emerald-500 font-label-md hover:underline transition-opacity" href="index.html">Terms</a>
-<a class="text-slate-500 hover:text-emerald-500 font-label-md hover:underline transition-opacity" href="about.html">Support</a>
-<a class="text-slate-500 hover:text-emerald-500 font-label-md hover:underline transition-opacity" href="about.html">API</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Privacy</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="index.html">Terms</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">Support</a>
+<a class="text-slate-500 dark:text-zinc-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-label-md hover:underline transition-opacity" href="about.html">API</a>
 </div>
 </div>
 </footer>
@@ -542,6 +555,27 @@
         binText.innerText = meta.bin;
         binText.style.color = meta.color;
         ecoTip.innerText = meta.tip;
+    }
+</script>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (themeToggleBtn) {
+        if (document.documentElement.classList.contains('dark')) {
+            lightIcon.classList.remove('hidden');
+        } else {
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+        });
     }
 </script>
 </body></html>
