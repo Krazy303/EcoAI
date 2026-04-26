@@ -3,6 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/png" href="logo.png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -127,7 +128,7 @@
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md shadow-sm">
 <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black tracking-tight text-emerald-600"><div class="flex items-center gap-2"><img alt="EcoAI Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/><span class="text-emerald-600">EcoAI</span></div></div>
+<div class="text-2xl font-black tracking-tight text-emerald-600"><div class="flex items-center gap-2"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/><span class="text-emerald-600">EcoAI</span></div></div>
 <div class="hidden md:flex items-center gap-space-lg">
 <a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="index.html">Home</a>
 <a class="text-slate-600 hover:text-emerald-500 transition-colors font-label-md" href="education.html">Education</a>
@@ -190,7 +191,7 @@
 <!-- Main Result Card -->
 <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm border border-outline-variant flex flex-col items-center text-center">
 <span class="text-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-space-sm">Classification Result</span>
-<div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-space-lg shadow-inner bg-white"><img alt="EcoAI" class="w-16 h-16 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/></div>
+<div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-space-lg shadow-inner bg-white"><img alt="EcoAI" class="w-16 h-16 object-contain" src="logo.png"/></div>
 <h2 id="result-label" class="font-h2 text-h2 text-primary mb-2 flex items-center justify-center gap-2">
     Awaiting Input
     <span id="live-badge" class="hidden flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
@@ -266,6 +267,29 @@
 </div>
 </div>
 </footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-50 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-xl px-3 py-1.5 active:scale-90 duration-150" href="classify.html">
+<span class="material-symbols-outlined" data-icon="recycling">recycling</span>
+<span class="font-['Inter'] text-[10px] font-medium">Classify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="education.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] font-medium">Education</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="impact.html">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-['Inter'] text-[10px] font-medium">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="about.html">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Inter'] text-[10px] font-medium">About</span>
+</a>
+</nav>
 <script>
     const URL = "./model/";
     let model, webcam, labelContainer, maxPredictions;

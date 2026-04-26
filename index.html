@@ -3,6 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -121,7 +122,7 @@
 <!-- TopAppBar -->
 <header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 shadow-sm dark:shadow-none font-['Inter'] antialiased dock full-width top-0 sticky z-50">
 <nav class="flex justify-between items-center h-16 px-6 md:px-12 max-w-7xl mx-auto">
-<div class="text-2xl font-bold tracking-tight text-emerald-600 dark:text-emerald-400">EcoAI</div>
+<div class="text-2xl font-bold tracking-tight text-emerald-600 dark:text-emerald-400"><div class="flex items-center gap-2"><img alt="EcoAI Logo" class="h-8 w-auto" src="logo.png"/><span>EcoAI</span></div></div>
 <div class="hidden md:flex items-center space-x-8">
 <a class="text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 dark:border-emerald-400 pb-1 font-semibold hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="index.html">Home</a>
 <a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors" href="classify.html">Classify</a>
@@ -149,7 +150,7 @@
 <div class="relative">
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
 <div class="relative rounded-2xl overflow-hidden shadow-level-2 border border-outline-variant">
-<img alt="Sustainability" class="w-full h-auto object-cover" data-alt="EcoAI Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/>
+<img alt="Sustainability" class="w-full h-auto object-cover" data-alt="EcoAI Logo" src="logo.png"/>
 </div>
 </div>
 </div>
@@ -240,7 +241,7 @@
 </div>
 <div class="relative">
 <div class="rounded-3xl overflow-hidden border border-emerald-900/50 shadow-2xl">
-<img alt="Environmental Impact" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="EcoAI Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uifwlVvuGPrBQx-P7Dhh_W_OsdTtalJ_J_anziqIIcNSHjWkddLK-wmzJPLLqNtSA5ELvzcLdB1Jyu8HNS1JKARcIUBJHUot-viuhPqornnMuwhmmlz7hBuEw2NqkTijoh-vWy4P-MT2v6OM_P7eCaI0Wrw82P9qJHs2qxwfD9sQUnJ4eAOgsx-XcPtq1rx1dlhoZxKFGH-X6VYn5BdEG6Qx8nM_du6WuXWoPo4ZiEaCvqKP-D8O9Nrds-ZwmK47rrDfRyiuM1OTQ"/>
+<img alt="Environmental Impact" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="EcoAI Logo" src="logo.png"/>
 </div>
 </div>
 </div>
@@ -287,4 +288,27 @@
 </div>
 </div>
 </footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center bg-emerald-50 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-xl px-3 py-1.5 active:scale-90 duration-150" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="classify.html">
+<span class="material-symbols-outlined" data-icon="recycling">recycling</span>
+<span class="font-['Inter'] text-[10px] font-medium">Classify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="education.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] font-medium">Education</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="impact.html">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-['Inter'] text-[10px] font-medium">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 duration-150" href="about.html">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Inter'] text-[10px] font-medium">About</span>
+</a>
+</nav>
 </body></html>
