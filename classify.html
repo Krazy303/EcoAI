@@ -198,13 +198,9 @@
 </div>
 <span id="confidence-text" class="font-label-md text-on-primary-fixed-variant whitespace-nowrap">0% Confidence</span>
 </div>
-<div class="w-full grid grid-cols-2 gap-space-sm mb-space-xl">
-<div class="p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
-<span class="text-xs font-label-sm block mb-1">MATERIAL</span>
-<span id="material-text" class="font-bold text-on-surface">Waiting for scan...</span>
-</div>
-<div class="p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30">
-<span class="text-xs font-label-sm block mb-1">BIN COLOR</span>
+<div class="w-full mb-space-xl">
+<div class="p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+<span class="text-xs font-label-sm">BIN COLOR</span>
 <span id="bin-text" class="font-bold text-secondary">Waiting for scan...</span>
 </div>
 </div>
@@ -293,7 +289,6 @@
     const resultLabel = document.getElementById('result-label');
     const confidenceBar = document.getElementById('confidence-bar');
     const confidenceText = document.getElementById('confidence-text');
-    const materialText = document.getElementById('material-text');
     const binText = document.getElementById('bin-text');
     const ecoTip = document.getElementById('eco-tip');
     const previewImg = document.getElementById('preview-img');
@@ -304,21 +299,25 @@
         "Recycleable": {
             material: "Plastic / Glass / Paper",
             bin: "Blue Bin",
+            color: "#2563eb",
             tip: "Rinse before recycling to prevent contamination of the entire batch."
         },
         "Organic": {
             material: "Food Scraps / Yard Waste",
             bin: "Green Bin",
+            color: "#10b981",
             tip: "This can be turned into nutrient-rich soil! Ensure no plastic is mixed in."
         },
         "NonRecycleable": {
             material: "Residual Waste",
             bin: "Black/Red Bin",
+            color: "#ef4444",
             tip: "These items cannot be recycled. Try to find reusable alternatives in the future."
         },
         "Hazard": {
             material: "E-Waste / Chemicals",
             bin: "Specialty Bin",
+            color: "#f59e0b",
             tip: "Hazardous waste needs special handling. Locate a nearby collection center."
         }
     };
@@ -540,8 +539,8 @@
         
         const meta = metaMap[metaKey];
         
-        materialText.innerText = meta.material;
         binText.innerText = meta.bin;
+        binText.style.color = meta.color;
         ecoTip.innerText = meta.tip;
     }
 </script>
