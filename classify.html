@@ -174,7 +174,7 @@
     <div class="scanning-line"></div>
 </div>
 <!-- Framing Corners -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+<div id="framing-corners" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
 <div class="bg-primary-container/20 backdrop-blur-sm border border-primary-container/40 p-space-lg rounded-full">
 <span class="material-symbols-outlined text-on-primary-container text-4xl">center_focus_weak</span>
 </div>
@@ -396,8 +396,9 @@
         webcam.canvas.className = "absolute inset-0 w-full h-full object-cover z-10";
         container.appendChild(webcam.canvas);
         
-        // Show switch camera button and live badge
+        // Show switch camera button, live badge, and framing corners
         document.getElementById('switch-camera-btn').classList.remove('hidden');
+        document.getElementById('framing-corners').classList.remove('hidden');
         liveBadge.classList.remove('hidden');
         isLiveMode = true;
         
@@ -475,6 +476,7 @@
                 // Stop live mode
                 isLiveMode = false;
                 liveBadge.classList.add('hidden');
+                document.getElementById('framing-corners').classList.add('hidden');
                 if (predictionInterval) clearInterval(predictionInterval);
 
                 // Remove webcam canvas if it exists
