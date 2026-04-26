@@ -163,7 +163,7 @@
 <input type="file" id="file-input" class="hidden" accept="image/*">
 </div>
 <!-- Input Display Area -->
-<div id="webcam-container" class="relative flex-grow aspect-video lg:aspect-square overflow-hidden group bg-black">
+<div id="webcam-container" class="relative flex-grow aspect-[3/4] lg:aspect-square overflow-hidden group bg-black">
 <button id="switch-camera-btn" class="hidden absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg active:scale-90">
     <span class="material-symbols-outlined">flip_camera_ios</span>
 </button>
@@ -362,9 +362,14 @@
             throw new Error("Webcam requires a secure context (HTTPS).");
         }
         
+        // Detect mobile and set dimensions to match the UI aspect ratio
+        const isMobile = window.innerWidth < 1024;
+        const width = isMobile ? 300 : 400;
+        const height = 400; // Keep 400 height for both, width changes
+        
         // Use currentFacingMode. Rear camera (environment) should NOT be flipped.
         const flip = currentFacingMode === "user";
-        webcam = new tmImage.Webcam(400, 400, flip); 
+        webcam = new tmImage.Webcam(width, height, flip); 
         
         try {
             // Try setup with facingMode
